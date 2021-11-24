@@ -1,0 +1,31 @@
+<div class="post-container">
+    <div class="post-header">
+        <span class="ui-tips">标题：</span>
+        <h1 class="ui-keyword post-title"><%- page.title || '(empty)' %></h1>
+        <span class="post-date"><%= date(page.date, 'yyyy-MM-DD') %></span>
+    </div>
+    <% if (page.categories.length) { %>
+    <div class="post-header">
+        <span class="ui-tips">分类：</span>
+        <% page.categories.forEach(category => {console.log(category.path); %>
+        <a href="<%= url_for(category.path) %>"><%= category.name %></a>
+        <% }) %>
+    </div>
+    <% } %>
+    <% if (page.tags.length) { %>
+    <div class="post-header">
+        <span class="ui-tips">分类：</span>
+        <% page.tags.forEach(tag => { %>
+        <a href="<%= url_for(tag.path) %>"><%= tag.name %></a>
+        <% }) %>
+    </div>
+    <% } %>
+    <% if (page.photos.length) { %>
+    <div class="post-content">
+        <% page.photos.forEach(photo => { %>
+        <img src="<%= photo %>" alt="photo" />
+        <% }) %>
+    </div>
+    <% } %>
+    <div class="post-content"><%- page.content %></div>
+</div>

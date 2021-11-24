@@ -1,0 +1,12 @@
+<% let i=1; site.posts.sort((a,b)=>b.date.getTime()-a.date.getTime()).forEach(post => { %>
+<div class="post-item">
+    <div class="post-header">
+        <span class="ui-tips post-index"><%=i++%>.</span>
+        <h2><a href="<%- url_for(post.path)%>"><%= post.title || '#' %></a></h2>
+        <span class="post-date"><%= date(post.date, 'yyyy-MM-DD') %></span>
+    </div>
+    <div class="post-content">
+        <%= strip_html(post.excerpt) || truncate(strip_html(post.content), {length: 180}) %>
+    </div>
+</div>
+<% }); %>
