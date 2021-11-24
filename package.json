@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-terminal",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.3",
   "description": "Terminal theme for Hexo.",
   "main": "index.js",
   "scripts": {

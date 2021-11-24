@@ -4,7 +4,7 @@
         <h1 class="ui-keyword post-title"><%- page.title || '(empty)' %></h1>
         <span class="post-date"><%= date(page.date, 'yyyy-MM-DD') %></span>
     </div>
-    <% if (page.categories.length) { %>
+    <% if (page.categories && page.categories.length) { %>
     <div class="post-header">
         <span class="ui-tips">分类：</span>
         <% page.categories.forEach(category => {console.log(category.path); %>
@@ -12,7 +12,7 @@
         <% }) %>
     </div>
     <% } %>
-    <% if (page.tags.length) { %>
+    <% if (page.tags && page.tags.length) { %>
     <div class="post-header">
         <span class="ui-tips">分类：</span>
         <% page.tags.forEach(tag => { %>
@@ -20,7 +20,7 @@
         <% }) %>
     </div>
     <% } %>
-    <% if (page.photos.length) { %>
+    <% if (page.photos && page.photos.length) { %>
     <div class="post-content">
         <% page.photos.forEach(photo => { %>
         <img src="<%= photo %>" alt="photo" />
