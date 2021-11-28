@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <%- css('styles/base.css') %>
     <%- css('styles/theme.css') %>
+    <%- favicon_tag(config.favicon || theme.favicon) %>
     <title><%- page&&page.title||'首页' %> - <%- config.title %></title>
 </head>
 <body>
@@ -17,7 +18,9 @@
     </div>
     <div class="container">
         <ul class="nav">
-        <% for ( menu in theme.menus ) { %>
+        <%
+            if(!theme.menus) theme.menus = {'首页': '/'};
+            for ( menu in theme.menus ) { %>
             <li><a href="<%- theme.menus[menu] %>"><%- menu %></a></li>
         <% } %>
         </ul>

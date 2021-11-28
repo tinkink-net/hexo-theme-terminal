@@ -1,4 +1,4 @@
-<% let i=1; site.posts.sort((a,b)=>b.date.getTime()-a.date.getTime()).forEach(post => { %>
+<% let i=1; page.posts.forEach(post => { %>
 <div class="post-item">
     <div class="post-header">
         <span class="ui-tips post-index"><%=i++%>.</span>
@@ -10,3 +10,9 @@
     </div>
 </div>
 <% }); %>
+
+<% if (page.total > 1){ %>
+<nav class="pagination">
+    <%- paginator() %>
+</nav>
+<% } %>

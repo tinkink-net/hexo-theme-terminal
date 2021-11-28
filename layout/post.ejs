@@ -7,14 +7,14 @@
     <% if (page.categories && page.categories.length) { %>
     <div class="post-header">
         <span class="ui-tips">分类：</span>
-        <% page.categories.forEach(category => {console.log(category.path); %>
+        <% page.categories.forEach(category => { %>
         <a href="<%= url_for(category.path) %>"><%= category.name %></a>
         <% }) %>
     </div>
     <% } %>
     <% if (page.tags && page.tags.length) { %>
     <div class="post-header">
-        <span class="ui-tips">分类：</span>
+        <span class="ui-tips">标签：</span>
         <% page.tags.forEach(tag => { %>
         <a href="<%= url_for(tag.path) %>"><%= tag.name %></a>
         <% }) %>
