@@ -10,13 +10,12 @@
     <%
         var title = '';
         if (is_tag()) {
-            title = page.tag + ' - 标签';
-        }
-        if (is_category()) {
-            title = page.category + ' - 分类';
+            title = page.tag + ' - ' + __('common.tag');
+        } else if (is_category()) {
+            title = page.category + ' - ' + __('common.category');
         }
     %>
-    <title><%- title || (page&&page.title) || '首页' %> - <%- config.title %></title>
+    <title><%- title || (page&&page.title) || __('common.home') %> - <%- config.title %></title>
     <% if (theme.google_analytics) { %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=<%-theme.google_analytics.tracking_id%>"></script>
@@ -39,7 +38,7 @@
     <div class="container">
         <ul class="nav">
         <%
-            if(!theme.menus) theme.menus = {'首页': '/'};
+            if(!theme.menus) theme.menus = {[__('common.home')]: '/'};
             for ( menu in theme.menus ) { %>
             <li><a href="<%- theme.menus[menu] %>"><%- menu %></a></li>
         <% } %>

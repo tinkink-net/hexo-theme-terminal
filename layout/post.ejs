@@ -1,12 +1,12 @@
 <div class="post-container">
     <div class="post-header">
-        <span class="ui-tips">标题：</span>
+        <span class="ui-tips"><%- __('common.title') + __('symbol.colon')%></span>
         <h1 class="ui-keyword post-title"><%- page.title || '(empty)' %></h1>
         <span class="post-date"><%= date(page.date, 'yyyy-MM-DD') %></span>
     </div>
     <% if (page.categories && page.categories.length) { %>
     <div class="post-header">
-        <span class="ui-tips">分类：</span>
+        <span class="ui-tips"><%- __('common.category') + __('symbol.colon')%></span>
         <% page.categories.forEach(category => { %>
         <a href="<%= url_for(category.path) %>"><%= category.name %></a>
         <% }) %>
@@ -14,7 +14,7 @@
     <% } %>
     <% if (page.tags && page.tags.length) { %>
     <div class="post-header">
-        <span class="ui-tips">标签：</span>
+        <span class="ui-tips"><%- __('common.tag') + __('symbol.colon')%></span>
         <% page.tags.forEach(tag => { %>
         <a href="<%= url_for(tag.path) %>"><%= tag.name %></a>
         <% }) %>

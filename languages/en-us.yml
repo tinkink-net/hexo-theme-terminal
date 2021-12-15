@@ -1,0 +1,7 @@
+common:
+  home: Home
+  title: Title
+  tag: Tag
+  category: Category
+symbol:
+  colon: ":"
