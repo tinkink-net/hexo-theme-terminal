@@ -7,7 +7,16 @@
     <%- css('styles/base.css') %>
     <%- css('styles/theme.css') %>
     <%- favicon_tag(config.favicon || theme.favicon) %>
-    <title><%- page&&page.title||'首页' %> - <%- config.title %></title>
+    <%
+        var title = '';
+        if (is_tag()) {
+            title = page.tag + ' - 标签';
+        }
+        if (is_category()) {
+            title = page.category + ' - 分类';
+        }
+    %>
+    <title><%- title || (page&&page.title) || '首页' %> - <%- config.title %></title>
     <% if (theme.google_analytics) { %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=<%-theme.google_analytics.tracking_id%>"></script>
