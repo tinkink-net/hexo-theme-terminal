@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-terminal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Terminal theme for Hexo.",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maiyatang2021/hexo-theme-terminal.git"
+    "url": "git+https://github.com/tinkink-co/hexo-theme-terminal.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maiyatang2021/hexo-theme-terminal/issues"
+    "url": "https://github.com/tinkink-co/hexo-theme-terminal/issues"
   },
-  "homepage": "https://github.com/maiyatang2021/hexo-theme-terminal#readme"
+  "homepage": "https://github.com/tinkink-co/hexo-theme-terminal#readme"
 }

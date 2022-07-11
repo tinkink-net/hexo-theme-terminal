@@ -48,14 +48,18 @@ theme_config:
     关于: /about/
   favicon: '/favicon.png'
   footers:
-    '&copy; 麦芽糖': 'https://maiyatang.co'
+    '&copy; Tinkink': 'https://tinkink.net'
   google_analytics:
     tracking_id: G-XXXXXXXXX
 ```
 
-Demo: <https://blog.maiyatang.co>
+Demo: <https://blog.tinkink.net>
 
 ## History 历史记录
+
+### 1.0.1 (2022-07-11)
+
+- Change `maiyatang` to `tinkink`
 
 ### 1.0.0（2021-12-15）
 
